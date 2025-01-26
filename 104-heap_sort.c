@@ -13,6 +13,7 @@
 void sift_down(int *array, size_t size, size_t index, size_t nth)
 {
 	size_t largest, left, right;
+
 	do {
 		left = getLeft(index);
 		right = getRight(index);
@@ -39,6 +40,7 @@ void sift_down(int *array, size_t size, size_t index, size_t nth)
 void heap_sort(int *array, size_t size)
 {
 	size_t node, sorted;
+
 	if (array == NULL || size < 2)
 		return;
 	for (node = getParent(size - 1); node != SIZE_MAX; node--)
